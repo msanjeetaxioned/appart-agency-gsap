@@ -12,7 +12,7 @@ const animation1Circle4 = fourCirclesContainer.querySelector(".circle-4");
 const fourCirclesContainerWidth = fourCirclesContainer.offsetWidth;
 const fourCirclesContainerHeight = fourCirclesContainer.offsetHeight;
 
-fourCirclesContainer.addEventListener("mousemove", (e) => {
+const fourCirclesAnimationHandler = (e) => {
     const clientX = e.clientX;
     const clientY = e.clientY - 30;
 
@@ -27,6 +27,8 @@ fourCirclesContainer.addEventListener("mousemove", (e) => {
 
     animation1Circle4.style.right = clientX / fourCirclesContainerWidth / 2 * 100 + "%";
     animation1Circle4.style.bottom = clientY / fourCirclesContainerHeight / 2 * 100 + "%";
-});
+}
+
+fourCirclesContainer.addEventListener("mousemove", fourCirclesAnimationHandler);
 
 // const tl1 = gsap.timeline({});

@@ -22,7 +22,7 @@ header {
   z-index: 100;
   top: 0;
   left: 0;
-  background: transparent;
+  background: #e2754d;
   justify-content: space-between;
   align-items: center;
 }
@@ -35,11 +35,59 @@ header h1 {
 .banner {
   width: 100%;
   height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .four-circles-animation-container {
   height: calc(100% - 60px);
+  border-bottom: 1px solid #000;
+  position: relative;
+  top: 30px;
   background-color: chocolate;
+}
+.four-circles-animation-container .four-circles-animation-inner {
+  width: calc(100vh - 60px);
+  height: calc(100vh - 60px);
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.four-circles-animation-container::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 0;
+  background-color: #000;
+  transform: translate(0, -50%);
+}
+.four-circles-animation-container::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  background-color: #000;
+  transform: translate(-50%, 0);
+}
+.four-circles-animation-container span {
+  width: 50%;
+  height: 50%;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+}
+.four-circles-animation-container .middle-circle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .message-container {
@@ -51,6 +99,8 @@ header h1 {
   width: 100%;
   height: 100vh;
   background-color: #fff;
+  position: relative;
+  z-index: 2;
 }
 
 .work-content {

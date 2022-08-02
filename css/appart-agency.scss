@@ -46,15 +46,15 @@ header {
 }
 
 .four-circles-animation-container {
-    height: calc(100% - $messageContainerHeight);
+    height: calc(100% - $messageContainerHeight - $headerHeight);
     border-bottom: 1px solid $black;
+    margin-top: $headerHeight;
     position: relative;
-    top: 30px;
     background-color: chocolate;
 
     .four-circles-animation-inner {
-        width: calc(100vh - 60px);
-        height: calc(100vh - 60px);
+        width: calc(100vh - $messageContainerHeight - $headerHeight);
+        height: calc(100vh - $messageContainerHeight - $headerHeight);
         position: absolute;
         z-index: 3;
         top: 50%;

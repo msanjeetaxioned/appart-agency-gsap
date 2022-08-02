@@ -1,3 +1,10 @@
+$headerHeight: 30px;
+$messageContainerHeight: 60px;
+
+$black: #000;
+$primary: #e2754d;
+$white: #fff;
+
 body {
     margin: 0;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
@@ -5,3 +12,57 @@ body {
 }
 
 * { box-sizing: border-box; }
+
+.wrapper {
+    width: 100%;
+    margin: 0 24px;
+}
+
+header {
+    width: 100%;
+    height: $headerHeight;
+    border-bottom: 1px solid $black;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: transparent;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        color: $black;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+}
+
+.four-circles-animation-container {
+    height: calc(100% - $messageContainerHeight);
+    background-color: chocolate;
+}
+
+.message-container {
+    height: $messageContainerHeight;
+    background: $primary;
+}
+
+.work {
+    width: 100%;
+    height: 100vh;
+    background-color: $white;
+}
+
+.work-content { height: calc(100% - 200px); }
+
+.work-sections li {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid $black;
+}

@@ -6,4 +6,59 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 24px;
+}
+
+header {
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #000;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: transparent;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+}
+
+.four-circles-animation-container {
+  height: calc(100% - 60px);
+  background-color: chocolate;
+}
+
+.message-container {
+  height: 60px;
+  background: #e2754d;
+}
+
+.work {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.work-content {
+  height: calc(100% - 200px);
+}
+
+.work-sections li {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #000;
 }/*# sourceMappingURL=appart-agency.css.map */

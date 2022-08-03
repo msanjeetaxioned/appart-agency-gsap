@@ -13,20 +13,23 @@ const fourCirclesContainerWidth = fourCirclesContainer.offsetWidth;
 const fourCirclesContainerHeight = fourCirclesContainer.offsetHeight;
 
 const fourCirclesAnimationHandler = (e) => {
-    const clientX = e.clientX;
-    const clientY = e.clientY - 30;
+    const timer = setTimeout(() => {
+        clearTimeout(timer);
+        const clientX = e.clientX;
+        const clientY = e.clientY - 30;
 
-    animation1Circle1.style.top = clientY / fourCirclesContainerHeight / 2 * 100 + "%";
-    animation1Circle1.style.left = clientX / fourCirclesContainerWidth / 2 * 100 + "%";
+        animation1Circle1.style.top = clientY / fourCirclesContainerHeight / 2 * 100 + "%";
+        animation1Circle1.style.left = clientX / fourCirclesContainerWidth / 2 * 100 + "%";
 
-    animation1Circle2.style.top = clientY / fourCirclesContainerHeight / 2 * 100 + "%";
-    animation1Circle2.style.right = clientX / fourCirclesContainerWidth / 2 * 100 + "%";
+        animation1Circle2.style.top = clientY / fourCirclesContainerHeight / 2 * 100 + "%";
+        animation1Circle2.style.right = clientX / fourCirclesContainerWidth / 2 * 100 + "%";
 
-    animation1Circle3.style.left = clientX / fourCirclesContainerWidth / 2 * 100 + "%";
-    animation1Circle3.style.bottom = clientY / fourCirclesContainerHeight / 2 * 100 + "%";
+        animation1Circle3.style.left = clientX / fourCirclesContainerWidth / 2 * 100 + "%";
+        animation1Circle3.style.bottom = clientY / fourCirclesContainerHeight / 2 * 100 + "%";
 
-    animation1Circle4.style.right = clientX / fourCirclesContainerWidth / 2 * 100 + "%";
-    animation1Circle4.style.bottom = clientY / fourCirclesContainerHeight / 2 * 100 + "%";
+        animation1Circle4.style.right = clientX / fourCirclesContainerWidth / 2 * 100 + "%";
+        animation1Circle4.style.bottom = clientY / fourCirclesContainerHeight / 2 * 100 + "%";
+    }, 150);
 }
 
 fourCirclesContainer.addEventListener("mousemove", fourCirclesAnimationHandler);

@@ -104,11 +104,44 @@ header h1 {
 }
 
 .work-content {
-  height: calc(100% - 200px);
+  height: 100%;
+}
+
+.work-sections {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
 }
 
 .work-sections li {
   width: 100%;
-  height: 50px;
+  height: 100vh;
   border-top: 1px solid #000;
+  position: absolute;
+}
+
+.work-sections li:nth-child(1) {
+  z-index: 4;
+  top: 0;
+  background-color: aqua;
+}
+
+.work-sections li:nth-child(2) {
+  z-index: 5;
+  top: 50px;
+  background-color: aquamarine;
+}
+
+.work-sections li:nth-child(3) {
+  z-index: 6;
+  top: 100px;
+  background-color: cadetblue;
+}
+
+.work-sections li:nth-child(4) {
+  z-index: 7;
+  top: 150px;
+  background-color: cornflowerblue;
 }/*# sourceMappingURL=appart-agency.css.map */

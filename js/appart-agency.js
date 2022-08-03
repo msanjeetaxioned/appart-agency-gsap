@@ -34,4 +34,35 @@ const fourCirclesAnimationHandler = (e) => {
 
 fourCirclesContainer.addEventListener("mousemove", fourCirclesAnimationHandler);
 
-// const tl1 = gsap.timeline({});
+ScrollTrigger.defaults({
+    toggleActions: "play none none reverse",
+    // markers: true
+  });
+  
+gsap.utils.toArray("section").forEach((panel, i) => {
+    ScrollTrigger.create({
+        trigger: panel,
+        start: "top top",
+        end: "+=100%",
+        pin: true, 
+        pinSpacing: false,
+        scrub: 1,
+        snap: {
+            snapTo: 1,
+            duration: {min: 0.5, max: 0.5}
+        }
+    });
+});
+
+// gsap.utils.toArray(".work-sections li").forEach((panel, i) => {
+//     ScrollTrigger.create({
+//         trigger: panel,
+//         start: "top top",
+//         end: `+=${() => {panel.offsetHeight}}`,
+//         scrub: 1,
+//         snap: {
+//             snapTo: 1,
+//             duration: {min: 0.5, max: 0.5}
+//         }
+//     });
+// });
